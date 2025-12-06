@@ -6,7 +6,7 @@ MATLAB implementation of the symbolic, state-based trajectory model and the **in
 > **“How Much to Learn? An Information-Sufficiency Criterion for Detecting Motion Rules in Scenario Surveillance”**, Preprints 2025, 202510.0359.  
 > DOI: [10.20944/preprints202510.0359.v1](https://doi.org/10.20944/preprints202510.0359.v1)
 
-This repository contains the core code used to **symbolically represent motion trajectories** in video surveillance scenarios and to **detect when the learned motion grammar has reached a stable, information-sufficient state**. :contentReference[oaicite:0]{index=0}
+This repository contains the core code used to **symbolically represent motion trajectories** in video surveillance scenarios and to **detect when the learned motion grammar has reached a stable, information-sufficient state**.
 
 ---
 
@@ -34,7 +34,7 @@ The goal of this codebase is to:
 3. **Infer a right-linear grammar** from the sequence of motion symbols using a SEQUITUR-like approach.
 4. **Compute an information-sufficiency criterion** that indicates when the learned grammar has stabilized and captures the dominant motion dynamics in the scenario.
 
-The same pipeline is used in the preprint to model real surveillance scenarios, including traffic flows in Querétaro City. :contentReference[oaicite:1]{index=1}
+The same pipeline is used in the preprint to model real surveillance scenarios, including traffic flows in Querétaro City.
 
 ---
 
