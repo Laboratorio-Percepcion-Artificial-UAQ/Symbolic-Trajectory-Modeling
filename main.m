@@ -1,11 +1,8 @@
 clc; clear all; close all;
 
-%% === Paths ===
-file_path  = 'C:\Users\Herlindo\Desktop\CIDESI\PhD\3.-Articulo Doctorado\ARTICULO MODELOS OCULTOS DE MARKOV\2.-PYTHON\Extraccion_trayectorias_python2';
-video_path = 'C:\Users\Herlindo\Desktop\CIDESI\MAESTRIA\Proyecto\Videos2';
-
 %% === Load Video ===
-vid = VideoReader(fullfile(video_path,'Rawvideo.avi'));
+video_path = pwd;  % carpeta actual
+vid = VideoReader(fullfile(video_path, 'Rawvideo.avi'));
 
 fps          = vid.FrameRate;
 total_frames = floor(vid.Duration * fps);
