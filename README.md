@@ -16,13 +16,14 @@ This repository contains the core code used to **symbolically represent motion t
 - [Repository structure](#repository-structure)
 - [Requirements](#requirements)
 - [Getting started](#getting-started)
+<!--
 --- [Reproducing the experiments](#reproducing-the-experiments)
 --- [Relation to the preprint](#relation-to-the-preprint)
 --- [How to cite](#how-to-cite)
 --- [License](#license)
 --- [Contact](#contact)
 --- [Resumen en español](#resumen-en-español)
-
+-->
 ---
 
 ## Overview
