@@ -2,7 +2,7 @@ clc; clear all; close all;
 
 %% === Load Video ===
 video_path = pwd;  % carpeta actual
-vid = VideoReader(fullfile(video_path, 'Rawvideo.avi'));
+vid = VideoReader(fullfile(video_path, 'scenario_1.avi'));
 
 fps          = vid.FrameRate;
 total_frames = floor(vid.Duration * fps);
