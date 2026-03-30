@@ -35,6 +35,7 @@ dead_frame_limit = 10 * step_frames;
 Tracks_temp   = containers.Map('KeyType','double','ValueType','any');
 Tracks_final  = containers.Map('KeyType','double','ValueType','any');
 last_update   = containers.Map('KeyType','double','ValueType','any');
+tm = 0.75;
 
 temp_id   = 1;
 track_id  = 0;
@@ -42,7 +43,7 @@ frame_idx = 0;
 vec            = zeros(size(Im_prev_gray));
 decay_acc      = zeros(size(Im_prev_gray));
 decay_prev     = zeros(size(Im_prev_gray));
-alpha_decay    = 0.9;
+alpha_decay    = (1-1/(fps/step_frames)*tm);
 
 accumulator = 0;
 
