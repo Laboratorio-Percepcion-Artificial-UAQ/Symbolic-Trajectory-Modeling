@@ -6,6 +6,7 @@ MATLAB implementation of a symbolic trajectory modeling framework for surveillan
 
 - [Description](#description)
 - [Data availability](#data-availability)
+- [Supplementary material](#supplementary-material)
 - [Methodological scope](#methodological-scope)
 - [Supported scenarios](#supported-scenarios)
 - [Repository structure](#repository-structure)
@@ -37,6 +38,23 @@ The datasets associated with this repository are publicly available in Mendeley 
 DOI: [10.17632/r95xbg36vb.2](https://doi.org/10.17632/r95xbg36vb.2)
 
 The dataset includes the video material corresponding to Scenario E1, authorized for redistribution by the authors, as well as the derived artifacts required to reproduce Scenario E4 based on the VIRAT benchmark. The original VIRAT videos are not redistributed and should be obtained from the official VIRAT source.
+
+## Supplementary material
+
+Additional supplementary material supporting the experiments reported in this repository is included in the supplementary document associated with the study.
+
+This material contains:
+
+- **Table S1**: motion-processing parameters used in the experimental setup for **Scenarios E1 and E4**.
+- **Table S2**: grammar-learning parameters used in the experimental setup for **Scenario E1**.
+
+The supplementary material is intended to provide a clearer description of the methodological parameterization used during preprocessing, motion extraction, symbolic trajectory construction, and grammar-learning stages.
+
+If distributed within this repository, the supplementary file should be placed in a dedicated directory such as:
+
+```text
+supplementary_material/
+└── Supplementary_Materials_Parameters.pdf
 
 ## Methodological scope
 
