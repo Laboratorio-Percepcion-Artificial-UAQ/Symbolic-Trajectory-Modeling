@@ -52,7 +52,6 @@ The supplementary material is intended to provide a clearer description of the m
 
 If distributed within this repository, the supplementary file should be placed in a dedicated directory such as:
 
-text
 supplementary_material/
 └── Supplementary_Materials_Parameters.pdf
 
