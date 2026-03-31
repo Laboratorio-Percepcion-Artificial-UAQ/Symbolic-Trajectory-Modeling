@@ -4,17 +4,17 @@ MATLAB implementation of a symbolic trajectory modeling framework for surveillan
 
 ## Table of contents
 
-- [Overview](#overview)
+- [Description](#description)
+- [Data availability](#data-availability)
 - [Repository structure](#repository-structure)
 - [Requirements](#requirements)
-- [Getting started](#getting-started)
+- [Usage](#usage)
 <!--
 --- [Reproducing the experiments](#reproducing-the-experiments)
 --- [Relation to the preprint](#relation-to-the-preprint)
 --- [How to cite](#how-to-cite)
 --- [License](#license)
 --- [Contact](#contact)
---- [Resumen en español](#resumen-en-español)
 -->
 ---
 
