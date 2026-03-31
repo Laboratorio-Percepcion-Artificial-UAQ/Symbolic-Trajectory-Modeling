@@ -1,14 +1,6 @@
 # Symbolic Trajectory Modeling
 
-MATLAB implementation of the symbolic, state-based trajectory model and the **information-sufficiency criterion** introduced in:
-
-> H. Hernandez-Ramirez, J. L. Perez-Ramos, D. Canton-Enriquez, A. M. Herrera-Navarro, H. Jimenez-Hernandez  
-> **“How Much to Learn? An Information-Sufficiency Criterion for Detecting Motion Rules in Scenario Surveillance”**, Preprints 2025, 202510.0359.  
-> DOI: [10.20944/preprints202510.0359.v1](https://doi.org/10.20944/preprints202510.0359.v1)
-
-This repository contains the core code used to **symbolically represent motion trajectories** in video surveillance scenarios and to **detect when the learned motion grammar has reached a stable, information-sufficient state**.
-
----
+MATLAB implementation of a symbolic trajectory modeling framework for surveillance scenarios, including grammar induction and an information-sufficiency criterion for motion pattern learning.
 
 ## Table of contents
 
@@ -26,74 +18,74 @@ This repository contains the core code used to **symbolically represent motion t
 -->
 ---
 
-## Overview
+## Description
 
-The goal of this codebase is to:
+This repository contains the source code associated with the experimental reproducibility of the article:
 
-1. **Segment the camera field of view into states** with high probability of motion.
-2. **Encode motion as symbolic trajectories** by assigning each active state to a symbol.
-3. **Infer a right-linear grammar** from the sequence of motion symbols using a SEQUITUR-like approach.
-4. **Compute an information-sufficiency criterion** that indicates when the learned grammar has stabilized and captures the dominant motion dynamics in the scenario.
+**H. Hernandez-Ramirez, J. L. Perez-Ramos, D. Canton-Enriquez, A. M. Herrera-Navarro, H. Jimenez-Hernandez**  
+**“How Much to Learn? An Information-Sufficiency Criterion for Detecting Motion Rules in Scenario Surveillance”**  
+Preprints 2025, 202510.0359  
+DOI: [10.20944/preprints202510.0359.v1](https://doi.org/10.20944/preprints202510.0359.v1)
 
-The same pipeline is used in the preprint to model real surveillance scenarios, including traffic flows in Querétaro City.
+The repository implements a symbolic, state-based representation of motion trajectories in video surveillance scenarios. Its main purpose is to support the construction of symbolic motion sequences, the inference of grammar-based motion rules, and the evaluation of a sufficiency criterion that determines when the observed motion patterns have been learned with adequate structural stability.
 
----
+## Data availability
+
+The datasets associated with this repository are publicly available in Mendeley Data:
+
+**Reproducibility Data for “A Grammar-Based Criterion for Learning Sufficiency in Motion Modeling”**  
+DOI: [10.17632/r95xbg36vb.2](https://doi.org/10.17632/r95xbg36vb.2)
+
+The dataset includes the video material corresponding to Scenario E1, authorized for redistribution by the authors, as well as the derived artifacts required to reproduce Scenario E4 based on the VIRAT benchmark. The original VIRAT videos are not redistributed and should be obtained from the official VIRAT source.
 
 ## Repository structure
 
-Main files in this repository:
+The main files currently included in this repository are:
 
-- `main.m`  
-  Entry script for running the symbolic trajectory modeling pipeline on a given video or precomputed trajectories.  
-  This script orchestrates:
-  - state generation and connectivity checks,  
-  - conversion of paths to symbolic sequences,  
-  - grammar inference and rule post-processing,  
-  - computation of the sufficiency / stability criterion.
+- `main_scenario1.m`  
+  Main execution script for the experiment associated with Scenario 1.
+
+- `main_scenario4.m`  
+  Main execution script for the experiment associated with Scenario 4.
 
 - `OriSeqV1.m`  
-  Utilities for handling original sequences of motion states (e.g., loading or preparing state trajectories from a scenario).
+  Functions related to sequence preparation and symbolic trajectory processing.
 
 - `Watershed.m`  
-  Functions related to **spatial partitioning / state definition**, typically using watershed-based segmentation on the image plane to obtain connected motion regions.
+  Functions for spatial partitioning and state generation in the scene.
 
 - `connectivity.m`  
-  Functions to ensure **connectivity of states and paths**, and to validate that trajectories move through adjacent, connected states only.
+  Utilities for validating spatial and sequential connectivity between states.
 
 - `convertPathsToSymbols.m`  
-  Conversion from **state trajectories → symbolic sequences**. Each valid state is mapped to a unique symbol in the alphabet.
+  Functions for transforming motion paths into symbolic sequences.
 
 - `decode_rules.m`  
-  Decoding and formatting of inferred grammar rules into a human-readable representation (e.g., for inspection and plotting of learned motion structures).
+  Utilities for decoding and formatting the inferred grammar rules.
 
 - `removeDuplicateRules.m`  
-  Post-processing of grammar rules to remove redundant or duplicate rules before evaluating the sufficiency criterion.
-
-- `Entry video link.txt`  
-  Text file with a link to the **reference surveillance video** used in the experiments.  
-  Download the video from this link if you want to reproduce the original scenarios.
+  Functions for postprocessing and removing redundant rules.
 
 - `LICENSE`  
-  MIT license for this code.
-
-> **Note:** Some internal details (variable names, parameters) are documented in the comments at the top of each `.m` file.
-
----
+  MIT license for the source code.
 
 ## Requirements
 
-- **MATLAB** (recent version; scripts were developed in modern MATLAB releases).  
-- Recommended toolboxes:
-  - **Image Processing Toolbox** (for segmentation, watershed, etc.).
-  - **Statistics and Machine Learning Toolbox** (if you extend the analysis with additional statistical tools).
+The code was developed in MATLAB and may require standard functionality for:
 
-Other versions / configurations of MATLAB may work but have not been systematically tested.
+- video reading,
+- matrix and sequence processing,
+- image-based scene partitioning,
+- symbolic rule manipulation.
 
----
+Depending on the local configuration and extensions to the experiments, the following MATLAB toolboxes may be useful:
 
-## Getting started
+- Image Processing Toolbox
+- Statistics and Machine Learning Toolbox
 
-1. **Clone this repository**
+## Usage
+
+1. Clone this repository:
 
    ```bash
    git clone https://github.com/Laboratorio-Percepcion-Artificial-UAQ/Symbolic-Trajectory-Modeling.git
